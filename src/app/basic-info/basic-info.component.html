@@ -1,0 +1,15 @@
+
+<ng-container [formGroup]="basicInfoForm">
+<div class="row">
+  <label for="Full Name"> Full Name </label>
+    <input type="text" id='fname' formControlName="fname" class="">
+    <!-- {{fname.invalid}}
+    {{fname.dirty}}
+    {{fname.touched}} -->
+    &nbsp; <span class="error-span" *ngIf="fname.invalid && (fname.dirty || fname.touched)">  enter name</span>
+</div>
+<div class="row">
+  <label for="Email"> Email </label>
+    <input type="text" formControlName="email" class="">
+</div>
+</ng-container>
